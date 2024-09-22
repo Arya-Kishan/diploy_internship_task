@@ -27,9 +27,9 @@ const Features = () => {
     return (
         <div className='w-full min-h-[500px] h-fit flex flex-col sm:flex-row justify-center items-center gap-10 font-Roboto px-[32px]'>
             {arr.map((e) => (
-                <div className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
+                <div key={e.title} className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
                     <p className={`w-[120px] h-[120px] rounded-full overflow-hidden flex justify-center items-center`} style={{backgroundColor:e.color}}>
-                        <img className='w-[80px]' src={e.pic} alt="" srcset="" />
+                        <img className='w-[80px]' src={e.pic} alt="" srcSet="" />
                     </p>
                     <p className='text-[24px] font-bold text-txtColor0 capitalize'>{e.title}</p>
                     <p className='text-[16px] text-txtColor2'>{e.description}</p>

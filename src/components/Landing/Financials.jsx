@@ -28,7 +28,7 @@ const Financials = () => {
 
                         <div className='font-semibold flex flex-col  gap-2 sm:gap-8 border-b-2 border-b-txtColor2 pb-[20px]'>
                             {billArr.map((e) => (
-                                <div className='w-full flex justify-between items-center gap-2'>
+                                <div key={e.title} className='w-full flex justify-between items-center gap-2'>
                                     <p>{e.title}</p>
                                     <p className='flex'><span>$</span><span>{e.cost}</span></p>
                                 </div>
@@ -50,7 +50,7 @@ const Financials = () => {
 
                 {/* right */}
                 <div className='hidden w-[50%] lg:flex justify-center items-end'>
-                    <img loading='lazy' src={watering} alt="" srcset="" />
+                    <img loading='lazy' src={watering} alt="" srcSet="" />
                 </div>
 
             </div>

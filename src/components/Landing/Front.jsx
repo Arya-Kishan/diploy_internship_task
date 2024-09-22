@@ -17,15 +17,15 @@ const Front = () => {
 
           <div className='flex flex-col gap-2 text-[12px] sm:text-[16px] font-medium text-txtColor2 pl-2'>
             <div className='flex gap-2'>
-              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcset="" />
+              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcSet="" />
               <p>100% Free to use</p>
             </div>
             <div className='flex gap-2'>
-              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcset="" />
+              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcSet="" />
               <p>900+ High Quality Products</p>
             </div>
             <div className='flex gap-2'>
-              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcset="" />
+              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcSet="" />
               <p>Largest global print network</p>
             </div>
           </div>

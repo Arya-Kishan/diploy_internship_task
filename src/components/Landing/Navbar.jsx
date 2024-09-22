@@ -13,16 +13,16 @@ const Navbar = () => {
 
             {/* logo */}
             <div className='flex gap-1'>
-                <img className='w-[25px] flex tablet:hidden' src={menuIcon} alt="" srcset="" />
+                <img className='w-[25px] flex tablet:hidden' src={menuIcon} alt="" srcSet="" />
                 <div className='flex gap-1 text-txtColor1'>
-                    <img loading='lazy' src={thumbIcon} alt="" srcset="" />
+                    <img loading='lazy' src={thumbIcon} alt="" srcSet="" />
                     <p className='hidden tablet:block font-bold text-[32px]'>Printify</p>
                 </div>
             </div>
 
             <div className='hidden tablet:flex  gap-4'>
                 {links.map((link) => (
-                    <NavbarLinks link={link} />
+                    <NavbarLinks key={link} link={link} />
                 ))}
             </div>
 

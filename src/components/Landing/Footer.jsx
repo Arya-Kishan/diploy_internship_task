@@ -37,23 +37,23 @@ const Footer = () => {
 
             <div className='w-full min-h-[50px] flex flex-col sm:flex-row justify-between gap-1'>
                 <div className='flex gap-1 text-txtColor1'>
-                    <img loading='lazy' src={thumbIcon} alt="" srcset="" />
+                    <img loading='lazy' src={thumbIcon} alt="" srcSet="" />
                     <p className='block font-bold text-[32px]'>Printify</p>
                 </div>
                 <div className='flex flex-wrap gap-4'>
                     {socialArr.map((e) => (
-                        <img loading='lazy' className='w-[32px]' src={e} alt="" srcset="" />
+                        <img key={e} loading='lazy' className='w-[32px]' src={e} alt="" srcSet="" />
                     ))}
                 </div>
             </div>
 
             <div className='w-full flex flex-wrap justify-between mt-[40px] sm:mt-[96px] mb-[72px]'>
                 {footerArr.map((e) => (
-                    <div className='max-w-[50%] flex flex-col gap-8 basis-[50%] tablet:basis-[17%] pt-[20px]'>
+                    <div key={e.title} className='max-w-[50%] flex flex-col gap-8 basis-[50%] tablet:basis-[17%] pt-[20px]'>
                         <p className='text-txtColor0 font-semibold capitalize'>{e.title}</p>
                         <div className='flex flex-col gap-2 text-txtColor2 text-[12px] sm:text-[14px]'>
                             {e.dataArr.map((e) => (
-                                <p>{e}</p>
+                                <p key={e}>{e}</p>
                             ))}
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const Footer = () => {
             <div className='w-full flex flex-col justify-center items-center gap-5 bg-bgColor1 pt-[36px] pb-[24px]'>
                 <div className='flex gap-6 flex-wrap'>
                     {siteInfoArr.map((e) => (
-                        <p className='text-[#949494] text-[14px] font-medium'>{e}</p>
+                        <p key={e} className='text-[#949494] text-[14px] font-medium'>{e}</p>
                     ))}
                 </div>
                 <p className='text-center text-[13px] font-medium text-txtColor0'>© 2024 Printify, Inc. All rights reserved.</p>

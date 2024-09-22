@@ -58,11 +58,11 @@ const NavbarLinks = ({ link }) => {
 
             <span>{link}</span>
 
-            {linksArrow.includes(link) && <img className={`w-[15px] transition duration-500 ease-in-out ${!options ? " rotate-180" : "rotate-0"}`} src={!options ? arrowBlackIcon : arrowGreenIcon} alt="" srcset="" />}
+            {linksArrow.includes(link) && <img className={`w-[15px] transition duration-500 ease-in-out ${!options ? " rotate-180" : "rotate-0"}`} src={!options ? arrowBlackIcon : arrowGreenIcon} alt="" srcSet="" />}
 
             {linksArrow.includes(link) && <div className={`w-[200px] h-fit ${options ? "flex" : "hidden"} flex-col gap-2 p-2 absolute top-full left-0 bg-white text-txtColor2 transition-all duration-700 shadow-md`}>
                 {getOptions(link).map((option) => (
-                    <p className='hover:text-txtColor1'>{option}</p>
+                    <p key={option} className='hover:text-txtColor1'>{option}</p>
                 ))}
             </div>}
 

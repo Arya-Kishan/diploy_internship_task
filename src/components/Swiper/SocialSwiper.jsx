@@ -60,13 +60,13 @@ const SocialSwiper = () => {
             className="w-full sm:w-[80%]"
         >
             {slidesArr.map((e) => (
-                <SwiperSlide className='w-[380px] max-h-[376px] flex flex-col gap-5 p-[10px] sm:p-[55px] bg-white rounded-md'>
+                <SwiperSlide key={e.name} className='w-[380px] max-h-[376px] flex flex-col gap-5 p-[10px] sm:p-[55px] bg-white rounded-md'>
                     <div className='flex flex-col sm:flex-row gap-4'>
-                        <img loading='lazy' className='w-[44px] sm:w-[64px] h-[44px] sm:h-[64px] rounded-md' src={e.pic} alt="" srcset="" />
+                        <img loading='lazy' className='w-[44px] sm:w-[64px] h-[44px] sm:h-[64px] rounded-md' src={e.pic} alt="" srcSet="" />
                         <div className='flex flex-col'>
                             <p className='text-[14px] sm:text-[24px] text-txtColor0'>{e.name}</p>
                             <p className='text-[12px] sm:text-[16px] text-txtColor1'>{e.authorLink}</p>
-                            <p className='flex'>{"stars".split("").map(() => (<img loading='lazy' className='w-[18px]' src={starIcon} alt="" srcset="" />))}</p>
+                            <p className='flex'>{"stars".split("").map((e,i) => (<img key={i} loading='lazy' className='w-[18px]' src={starIcon} alt="" srcSet="" />))}</p>
                         </div>
                     </div>
 
