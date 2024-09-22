@@ -6,6 +6,7 @@ import Connect from '../components/Landing/Connect'
 import Footer from '../components/Landing/Footer'
 import Financials from '../components/Landing/Financials'
 import Features from '../components/Landing/Features'
+import SocialProof from '../components/Landing/SocialProof'
 
 const HomePage = () => {
     return (
@@ -15,6 +16,7 @@ const HomePage = () => {
             <Features />
             <HowItWorks />
             <Connect />
+            <SocialProof />
             <Financials />
             <Footer />
         </div>

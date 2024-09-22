@@ -5,6 +5,23 @@ import triangle2 from '../../assets/triangle2.svg'
 import create from '../../assets/icons/create.png'
 import handle from '../../assets/icons/handle.png'
 import sell from '../../assets/icons/sell.png'
+import shirt from '../../assets/shirt.webp'
+import { delay, motion, spring, stagger } from 'framer-motion'
+
+const fadeInVariants = {
+    initial: {
+        opacity: 0,
+        y: -200
+    },
+    animate: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.5 * index
+        }
+    })
+}
+
 
 const HowItWorks = () => {
 
@@ -33,21 +50,25 @@ const HowItWorks = () => {
         <div className='howItWorks w-full h-fit flex flex-col justify-center bg-bgColor1 px-[24px] py-[100px] relative'>
 
             {/* fist box */}
-            <div className='w-[90%] h-[460px] flex bg-white rounded-md mt-[180px]'>
+            <div className='w-full sm:w-[90%] min-h-[350px] flex flex-col sm:flex-row bg-white rounded-md mt-[180px] p-2'>
 
                 {/* left */}
-                <div className='w-full sm:w-[50%] flex justify-center items-center gap-2 relative'>
-                    <div className='w-[50%] h-[120%] bg-teal-600 absolute bottom-0 left-[30%]'></div>
+                <div className='w-full sm:w-[50%] flex justify-center items-center gap-2'>
+                    <img className='w-[50%]' src={shirt} alt="" srcset="" />
                 </div>
 
                 {/* right */}
-                <div className='w-full sm:w-[50%] flex justify-center items-center gap-2'>
+                <motion.div
+                    initial={{ opacity: 0, y: 200 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    className='w-full sm:w-[50%] flex justify-center items-center gap-2'>
 
                     {/* right inner */}
                     <div className='max-w-[400px] flex flex-col gap-8'>
-                        <p className='text-[32px] text-txtColor0 font-bold'>Easily add your design to a wide range of products</p>
+                        <p className='text-[24px] sm:text-[32px] text-txtColor0 font-bold'>Easily add your design to a wide range of products</p>
 
-                        <p className='text-txtColor2'>With our free design tools, you can easily add your custom designs to t-shirts, mugs, phone cases, and hundreds of other products</p>
+                        <p className='text-txtColor2 text-[12px] sm:text-[16px]'>With our free design tools, you can easily add your custom designs to t-shirts, mugs, phone cases, and hundreds of other products</p>
 
                         <button className='text-txtColor1 flex gap-4 font-bold'>
                             <p>All Products</p>
@@ -55,14 +76,21 @@ const HowItWorks = () => {
                         </button>
                     </div>
 
-                </div>
+                </motion.div>
 
             </div>
 
             {/* second div */}
             <div className='w-full min-h-[520px] h-fit flex flex-col sm:flex-row justify-center items-center gap-10 font-Roboto px-[32px] pt-[120px]'>
-                {arr.map((e) => (
-                    <div className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
+                {arr.map((e, index) => (
+                    <motion.div
+                        variants={fadeInVariants}
+                        initial="initial"
+                        whileInView="animate"
+                        transition={{ duration: 0.2, type: spring }}
+                        viewport={{ once: false }}
+                        custom={index}
+                        className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
                         <p className={`w-[120px] h-[120px] rounded-full overflow-hidden flex justify-center items-center`} style={{ backgroundColor: e.color }}>
                             <img className='w-[80px]' src={e.pic} alt="" srcset="" />
                         </p>
@@ -71,7 +99,7 @@ const HowItWorks = () => {
                             <p className='text-[24px] font-bold text-black capitalize'>{e.title2}</p>
                         </div>
                         <p className='text-[16px] text-txtColor2'>{e.description}</p>
-                    </div>
+                    </motion.div>
                 ))}
 
             </div>

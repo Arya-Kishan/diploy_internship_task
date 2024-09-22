@@ -1,5 +1,6 @@
 import React from 'react'
 import watering from '../../assets/watering.jpg'
+import { motion } from 'framer-motion'
 
 const Financials = () => {
     const billArr = [
@@ -18,7 +19,12 @@ const Financials = () => {
 
             <div className='w-[90%] sm:w-[80%] flex items-center justify-center'>
                 {/* left */}
-                <div className='w-full sm:w-[80%] lg:w-[50%] bg-[#203741] text-white px-[24px] sm:px-[60px] py-[56px] rounded-[30px] flex flex-col gap-2 sm:gap-6'>
+                <motion.div
+                    initial={{ opacity: 1, x: 800 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false }}
+                    // transition={{duration:5}}
+                    className='w-full sm:w-[80%] lg:w-[50%] bg-[#203741] text-white px-[24px] sm:px-[60px] py-[56px] rounded-[30px] flex flex-col gap-2 sm:gap-6'>
 
                     <p className='text-[25px] sm:text-[40px] font-semibold'>Make Money, Risk-Free</p>
 
@@ -46,7 +52,7 @@ const Financials = () => {
 
                     <p className='font-medium text-txtColor3 text-[13px] sm:text-[16px]'>100% Free to use · 900+ Products · Largest print network</p>
 
-                </div>
+                </motion.div>
 
                 {/* right */}
                 <div className='hidden w-[50%] lg:flex justify-center items-end'>
