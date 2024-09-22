@@ -6,22 +6,6 @@ import create from '../../assets/icons/create.png'
 import handle from '../../assets/icons/handle.png'
 import sell from '../../assets/icons/sell.png'
 import shirt from '../../assets/shirt.webp'
-import { delay, motion, spring, stagger } from 'framer-motion'
-
-const fadeInVariants = {
-    initial: {
-        opacity: 0,
-        y: -200
-    },
-    animate: (index) => ({
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: 0.5 * index
-        }
-    })
-}
-
 
 const HowItWorks = () => {
 
@@ -58,11 +42,7 @@ const HowItWorks = () => {
                 </div>
 
                 {/* right */}
-                <motion.div
-                    initial={{ opacity: 0, y: 200 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false }}
-                    className='w-full sm:w-[50%] flex justify-center items-center gap-2'>
+                <div className='w-full sm:w-[50%] flex justify-center items-center gap-2'>
 
                     {/* right inner */}
                     <div className='max-w-[400px] flex flex-col gap-8'>
@@ -76,21 +56,14 @@ const HowItWorks = () => {
                         </button>
                     </div>
 
-                </motion.div>
+                </div>
 
             </div>
 
             {/* second div */}
             <div className='w-full min-h-[520px] h-fit flex flex-col sm:flex-row justify-center items-center gap-10 font-Roboto px-[32px] pt-[120px]'>
                 {arr.map((e, index) => (
-                    <motion.div
-                        variants={fadeInVariants}
-                        initial="initial"
-                        whileInView="animate"
-                        transition={{ duration: 0.2, type: spring }}
-                        viewport={{ once: false }}
-                        custom={index}
-                        className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
+                    <div className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
                         <p className={`w-[120px] h-[120px] rounded-full overflow-hidden flex justify-center items-center`} style={{ backgroundColor: e.color }}>
                             <img className='w-[80px]' src={e.pic} alt="" srcset="" />
                         </p>
@@ -99,7 +72,7 @@ const HowItWorks = () => {
                             <p className='text-[24px] font-bold text-black capitalize'>{e.title2}</p>
                         </div>
                         <p className='text-[16px] text-txtColor2'>{e.description}</p>
-                    </motion.div>
+                    </div>
                 ))}
 
             </div>

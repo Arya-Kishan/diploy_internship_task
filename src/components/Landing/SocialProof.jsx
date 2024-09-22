@@ -14,11 +14,7 @@ const SocialProof = () => {
         {/* left */}
         <p className='w-full sm:w-[35%] text-[30px] sm:text-[40px] font-bold text-txtColor0'>Trusted by over 8M sellers around the world</p>
         {/* right */}
-        <motion.p
-          initial={{ opacity: 0, x: -500 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false }}
-          className='w-full sm:w-[30%] text-txtColor2 flex justify-start items-center'>Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.</motion.p>
+        <p className='w-full sm:w-[30%] text-txtColor2 flex justify-start items-center'>Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.</p>
 
       </div>
 

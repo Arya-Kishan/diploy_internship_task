@@ -8,7 +8,6 @@ import woo from '../../assets/icons/woo.svg'
 import prestashop from '../../assets/icons/prestashop.svg'
 import api from '../../assets/icons/api.svg'
 import shopify from '../../assets/icons/shopify.svg'
-import { motion } from 'framer-motion'
 
 const Connect = () => {
 
@@ -62,41 +61,13 @@ const Connect = () => {
 
         <div className='w-full sm:w-[80%] h-[100vh] flex justify-center items-center relative'>
 
-          <motion.img
-            initial={{ top: "50%", left: "50%", translate: "-50% -50%" }}
-            whileInView={{ top: "15%", left: "75%", translate: "0% 0%" }}
-            viewport={{once:true}}
-            className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[15%] left-[75%]' src={wix} alt="" srcset="" />
-          <motion.img
-            initial={{ top: "50%", left: "50%", translate: "-50% -50%" }}
-            whileInView={{ top: "20%", left: "35%", translate: "0% 0%" }}
-            viewport={{once:true}}
-            className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[20%] left-[35%]' src={bigecommerce} alt="" srcset="" />
-          <motion.img
-            initial={{ top: "50%", left: "50%", translate: "-50% -50%" }}
-            whileInView={{ top: "10%", left: "15%", translate: "0% 0%" }}
-            viewport={{once:true}}
-            className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[10%] left-[15%]' src={squarespace} alt="" srcset="" />
-          <motion.img
-            initial={{ top: "50%", left: "50%", translate: "-50% -50%" }}
-            whileInView={{ top: "60%", left: "60%", translate: "0% 0%" }}
-            viewport={{once:true}}
-            className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[10%] left-[60%]' src={woo} alt="" srcset="" />
-          <motion.img
-            initial={{ top: "50%", left: "50%", translate: "-50% -50%" }}
-            whileInView={{ top: "75%", left: "70%", translate: "0% 0%" }}
-            viewport={{once:true}}
-            className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[25%] left-[70%]' src={etsy} alt="" srcset="" />
-          <motion.img
-            initial={{ top: "50%", left: "50%", translate: "-50% -50%" }}
-            whileInView={{ top: "60%", left: "15%", translate: "0% 0%" }}
-            viewport={{once:true}}
-            className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[30%] left-[15%]' src={api} alt="" srcset="" />
-          <motion.img
-            initial={{ bottom: "50%", left: "50%", translate: "-50% -50%" }}
-            whileInView={{ bottom: "15%", left: "25%", translate: "0% 0%" }}
-            viewport={{once:true}}
-            className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[15%] left-[25%]' src={prestashop} alt="" srcset="" />
+          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[15%] left-[75%]' src={wix} alt="" srcset="" />
+          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[20%] left-[35%]' src={bigecommerce} alt="" srcset="" />
+          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[10%] left-[15%]' src={squarespace} alt="" srcset="" />
+          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[10%] left-[60%]' src={woo} alt="" srcset="" />
+          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[25%] left-[70%]' src={etsy} alt="" srcset="" />
+          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[30%] left-[15%]' src={api} alt="" srcset="" />
+          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[15%] left-[25%]' src={prestashop} alt="" srcset="" />
           <img
             className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[50%] left-[50%] -translate-x-[50%]' src={thumbIcon} alt="" srcset="" />
 
