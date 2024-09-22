@@ -5,13 +5,13 @@ import LottieImage1 from '../LottieImage1'
 
 const Front = () => {
   return (
-    <div className='w-full min-h-[500px] h-fit flex flex-col sm:flex-row mt-[50px] sm:mt-[100px]'>
+    <div className='w-full min-h-[500px] h-fit flex flex-col sm:flex-row mt-[100px] sm:mt-[200px]'>
 
       {/* left */}
       <div className='w-full sm:w-[50%] h-full flex justify-center items-center'>
 
         {/* inner left div */}
-        <div className='max-w-[500px] h-fit flex flex-col gap-5 pl-10'>
+        <div className='max-w-[500px] h-fit flex flex-col gap-5 pl-8'>
 
           <p className='text-[30px] sm:text-[56px] font-bold text-txtColor0'>Create and sell custom products</p>
 

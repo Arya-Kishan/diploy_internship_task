@@ -1,6 +1,7 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, useState } from 'react'
 import Navbar from './components/Landing/Navbar'
 import Loader from './components/Loader'
+import thumbIcon from './assets/icons/thumbIcon.svg'
 const Front = lazy(() => import("./components/Landing/Front"))
 const Features = lazy(() => import("./components/Landing/Features"))
 const HowItWorks = lazy(() => import("./components/Landing/HowItWorks"))
@@ -24,6 +25,7 @@ const App = () => {
         <Financials />
         <Footer />
       </Suspense>
+      <img className='w-[40px] h-[40px] fixed bottom-8 left-4 bg-white shadow-md rounded-full p-2' src={thumbIcon} alt="" srcset="" />
     </div>
   )
 }

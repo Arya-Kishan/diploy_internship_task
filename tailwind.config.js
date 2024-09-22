@@ -12,6 +12,7 @@ export default {
       },
       "colors": {
         "btnColor1": "#75F94C",
+        "btnColor2": "#6aec42",
         "txtColor0": "#17262B",
         "txtColor1": "#75F94C",
         "txtColor2": "#485256",

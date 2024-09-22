@@ -8,6 +8,8 @@ import sell from '../../assets/icons/sell.png'
 import shirt from '../../assets/shirt.webp'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import LottieImage2 from '../LottieImage2'
+import HowItWorksSwiper from '../Swiper/HowItWorksSwiper'
 
 const HowItWorks = () => {
 
@@ -23,7 +25,7 @@ const HowItWorks = () => {
             let t1 = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".box",
-                    start:"top center"
+                    start: "top center"
                 },
             })
                 .from(".box", {
@@ -40,7 +42,7 @@ const HowItWorks = () => {
             gsap.from(".card0", {
                 scrollTrigger: {
                     trigger: '.card0',
-                    start:'top center'
+                    start: 'top center'
                 },
                 y: -100,
                 opacity: 0,
@@ -50,7 +52,7 @@ const HowItWorks = () => {
             gsap.from(".card1", {
                 scrollTrigger: {
                     trigger: '.card1',
-                    start:'top center'
+                    start: 'top center'
                 },
                 y: -100,
                 opacity: 0,
@@ -60,7 +62,7 @@ const HowItWorks = () => {
             gsap.from(".card2", {
                 scrollTrigger: {
                     trigger: '.card2',
-                    start:'top center'
+                    start: 'top center'
                 },
                 y: -100,
                 opacity: 0,
@@ -103,15 +105,16 @@ const HowItWorks = () => {
 
                 {/* left */}
                 <div className='w-full lg:w-[50%] flex justify-center items-center gap-2 relative z-20'>
-                    <img loading='lazy' className='w-[55%] lg:absolute bottom-0 left-0' src={shirt} alt="" srcSet="" />
+                    <img loading='lazy' className='w-[55%] sm:w-[40%] lg:w-[55%] lg:absolute bottom-0 left-0' src={shirt} alt="" srcSet="" />
+                    <div className='hidden lg:flex lg:absolute bottom-10 right-0 z-30'><LottieImage2 /></div>
                 </div>
 
                 {/* right */}
-                <div className='w-full sm:w-[50%] flex justify-center items-center gap-2 right z-20'>
+                <div className='w-full sm:w-[50%] flex justify-center items-center sm:items-end lg:items-center gap-2 overflow-hidden z-20'>
 
                     {/* right inner */}
-                    <div className='max-w-[400px] flex flex-col gap-8'>
-                        <p className='text-[20px] sm:text-[32px] text-txtColor0 font-bold'>Easily add your design to a wide range of products</p>
+                    <div className='max-w-[400px] flex flex-col gap-8 right'>
+                        <p className='text-[20px] sm:text-[26px] lg:text-[32px] text-txtColor0 font-bold'>Easily add your design to a wide range of products</p>
 
                         <p className='text-txtColor2 text-[12px] sm:text-[16px]'>With our free design tools, you can easily add your custom designs to t-shirts, mugs, phone cases, and hundreds of other products</p>
 
@@ -128,21 +131,23 @@ const HowItWorks = () => {
             </div>
 
             {/* HOWITWORKS THREE CARDS */}
-            <div className='w-full min-h-[520px] h-fit flex flex-col sm:flex-row justify-center items-center gap-10 font-Roboto px-[32px] pt-[120px]'>
+            <div className='hidden w-full min-h-[520px] h-fit sm:flex flex-col sm:flex-row justify-center items-center gap-10 font-Roboto px-[32px] pt-[120px]'>
                 {arr.map((e, index) => (
                     <div key={index} className={`card${index} max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start`}>
                         <p className={`w-[120px] h-[120px] rounded-full overflow-hidden flex justify-center items-center`} style={{ backgroundColor: e.color }}>
                             <img loading='lazy' className='w-[80px]' src={e.pic} alt="" srcSet="" />
                         </p>
                         <div className='flex flex-col'>
-                            <p className='text-[24px] font-bold text-txtColor1 uppercase'>{e.title1}</p>
-                            <p className='text-[24px] font-bold text-black capitalize'>{e.title2}</p>
+                            <p className='text-[24px] font-bold text-txtColor1 uppercase text-center sm:text-start'>{e.title1}</p>
+                            <p className='text-[22px] font-bold text-black capitalize'>{e.title2}</p>
                         </div>
                         <p className='text-[16px] text-txtColor2'>{e.description}</p>
                     </div>
                 ))}
 
             </div>
+
+            <div className='w-[90%] block sm:hidden mt-20'><HowItWorksSwiper slidesArr={arr} /></div>
 
             <img loading='lazy' className='w-[350px] absolute top-0 left-[50%] -translate-x-[50%]' src={triangle1} alt="" srcSet="" />
             <img loading='lazy' className='w-[350px] absolute top-full left-[50%] -translate-x-[50%]' src={triangle2} alt="" srcSet="" />

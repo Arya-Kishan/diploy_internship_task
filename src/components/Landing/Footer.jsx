@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
                 <div className='flex flex-wrap gap-4'>
                     {socialArr.map((e) => (
-                        <img key={e} loading='lazy' className='w-[32px]' src={e} alt="" srcSet="" />
+                        <img key={e} loading='lazy' className='w-[32px] cursor-pointer' src={e} alt="" srcSet="" />
                     ))}
                 </div>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
                         <p className='text-txtColor0 font-semibold capitalize'>{e.title}</p>
                         <div className='flex flex-col gap-2 text-txtColor2 text-[12px] sm:text-[14px]'>
                             {e.dataArr.map((e) => (
-                                <p key={e}>{e}</p>
+                                <p key={e} className='hover:text-txtColor1 cursor-pointer'>{e}</p>
                             ))}
                         </div>
                     </div>

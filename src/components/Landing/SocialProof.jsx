@@ -13,18 +13,6 @@ const SocialProof = () => {
 
     const ctx1 = gsap.context(() => {
 
-      // let t1 = gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: ".right",
-      //     toggleActions: "restart none none none",
-      //   },
-      // })
-      //   .from(".right", {
-      //     opacity: 0,
-      //     x: 400,
-      //     duration: 1,
-      //   }, 'a')
-
       gsap.from(".rightText", {
         scrollTrigger: {
           trigger: '.rightText',
@@ -47,7 +35,7 @@ const SocialProof = () => {
       <div className='w-full sm:w-[80%] h-fit flex flex-col sm:flex-row gap-5 sm:gap-[100px] m-[50px]'>
 
         {/* left */}
-        <p className='w-full sm:w-[35%] text-[30px] sm:text-[40px] font-bold text-txtColor0'>Trusted by over 8M sellers around the world</p>
+        <p className='w-full sm:w-[35%] text-[30px] md:text-[40px] font-bold text-txtColor0'>Trusted by over 8M sellers around the world</p>
         {/* right */}
         <p className='w-full sm:w-[30%] text-txtColor2 flex justify-start items-center rightText'>Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.</p>
 

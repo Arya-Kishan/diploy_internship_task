@@ -1,8 +1,33 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import rocketIcon from '../../assets/icons/rocketIcon.png'
 import profitIcon from '../../assets/icons/profitIcon.png'
 import selectionIcon from '../../assets/icons/selectionIcon.png'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 const Features = () => {
+
+    gsap.registerPlugin(ScrollTrigger)
+    const parentRef = useRef();
+
+    useLayoutEffect(() => {
+
+        const ctx1 = gsap.context(() => {
+
+            gsap.from(".text", {
+                scrollTrigger: {
+                    trigger: '.text',
+                },
+                y: -200,
+                opacity: 0,
+                duration: 0.6,
+            })
+
+        }, parentRef)
+
+        return () => ctx1.revert();
+
+    }, [])
 
     const arr = [
         {
@@ -24,14 +49,15 @@ const Features = () => {
             pic: selectionIcon
         },
     ]
+
     return (
-        <div className='w-full min-h-[500px] h-fit flex flex-col sm:flex-row justify-center items-center gap-10 font-Roboto px-[32px]'>
+        <div className='w-full min-h-[500px] h-fit flex flex-col sm:flex-row justify-center items-center gap-10 font-Roboto px-[32px]' ref={parentRef}>
             {arr.map((e) => (
                 <div key={e.title} className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
-                    <p className={`w-[120px] h-[120px] rounded-full overflow-hidden flex justify-center items-center`} style={{backgroundColor:e.color}}>
+                    <p className={`w-[120px] h-[120px] rounded-full overflow-hidden flex justify-center items-center`} style={{ backgroundColor: e.color }}>
                         <img className='w-[80px]' src={e.pic} alt="" srcSet="" />
                     </p>
-                    <p className='text-[24px] font-bold text-txtColor0 capitalize'>{e.title}</p>
+                    <div className='overflow-hidden'><p className='text text-[24px] font-bold text-txtColor0 capitalize'>{e.title}</p></div>
                     <p className='text-[16px] text-txtColor2'>{e.description}</p>
                 </div>
             ))}
