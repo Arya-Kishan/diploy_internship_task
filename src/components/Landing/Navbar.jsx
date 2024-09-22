@@ -14,7 +14,7 @@ const Navbar = () => {
             {/* logo */}
             <div className='flex gap-1'>
                 <img className='w-[25px] flex tablet:hidden' src={menuIcon} alt="" srcSet="" />
-                <div className='flex gap-1 text-txtColor1'>
+                <div className='flex gap-1 text-txtColor1 cursor-pointer'>
                     <img loading='lazy' src={thumbIcon} alt="" srcSet="" />
                     <p className='hidden tablet:block font-bold text-[32px]'>Printify</p>
                 </div>
@@ -27,8 +27,8 @@ const Navbar = () => {
             </div>
 
             <div className='flex items-center gap-4 text-[12px] sm:text-[16px]'>
-                <button className='w-[60px] sm:w-[88px] h-[26px] sm:h-[36px] rounded-sm font-medium capitalize border-2 border-brdrColor1'>login</button>
-                <button className='w-[60px] sm:w-[88px] h-[26px] sm:h-[36px] rounded-sm font-medium capitalize bg-txtColor1 text-white'>sign up</button>
+                <button className='w-[60px] sm:w-[88px] h-[26px] sm:h-[36px] rounded-sm font-medium capitalize border-2 border-brdrColor1 hover:text-txtColor1'>login</button>
+                <button className='w-[60px] sm:w-[88px] h-[26px] sm:h-[36px] rounded-sm font-medium capitalize bg-txtColor1 text-white hover:bg-[#6aec42] '>sign up</button>
             </div>
 
         </div>

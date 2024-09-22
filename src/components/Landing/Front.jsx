@@ -5,7 +5,7 @@ import LottieImage1 from '../LottieImage1'
 
 const Front = () => {
   return (
-    <div className='w-full min-h-[100vh] flex flex-col sm:flex-row mt-10'>
+    <div className='w-full min-h-[500px] h-fit flex flex-col sm:flex-row mt-[50px] sm:mt-[100px]'>
 
       {/* left */}
       <div className='w-full sm:w-[50%] h-full flex justify-center items-center'>
@@ -32,11 +32,11 @@ const Front = () => {
 
           <div className='flex gap-1 sm:gap-4 mt-5 text-[10px] sm:text-[12px]'>
 
-            <button className='w-[100px] sm:w-[160px] h-[30px] sm:h-[48px] flex gap-2 rounded-sm bg-btnColor1 justify-center items-center text-white font-semibold sm:text-[16px]'>Start for free</button>
+            <button className='w-[100px] sm:w-[160px] h-[30px] sm:h-[48px] flex gap-2 rounded-sm bg-btnColor1 hover:bg-[#6aec42] justify-center items-center text-white font-semibold sm:text-[16px]'>Start for free</button>
 
             <button className='w-[100px] sm:w-[160px] h-[30px] sm:h-[48px] flex gap-2 rounded-sm border-2 border-gray-400 justify-center items-center text-txtColor2 font-semibold sm:text-[16px]'>
               <img loading='lazy' className='w-[15px] sm:w-[25px]' src={playIcon} alt="" />
-              <p>How it works</p>
+              <p className='hover:text-txtColor1'>How it works</p>
             </button>
 
           </div>
@@ -49,7 +49,7 @@ const Front = () => {
 
 
       {/* right */}
-      <div className='w-full sm:w-[50%] h-full flex justify-start items-center'>
+      <div className='w-full sm:w-[50%] h-[full] flex justify-start items-center '>
         <div className='w-full'><LottieImage1 /></div>
       </div>
 

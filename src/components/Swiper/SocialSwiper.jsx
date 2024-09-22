@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -10,8 +10,46 @@ import profile3 from '../../assets/profileImages/profile3.jpg'
 import profile4 from '../../assets/profileImages/profile4.jpg'
 import profile5 from '../../assets/profileImages/profile5.jpg'
 import starIcon from '../../assets/icons/starIcon.svg'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const SocialSwiper = () => {
+
+    gsap.registerPlugin(ScrollTrigger)
+    const parentRef = useRef();
+  
+    useLayoutEffect(() => {
+  
+      const ctx1 = gsap.context(() => {
+  
+        // let t1 = gsap.timeline({
+        //   scrollTrigger: {
+        //     trigger: ".right",
+        //     toggleActions: "restart none none none",
+        //   },
+        // })
+        //   .from(".right", {
+        //     opacity: 0,
+        //     x: 400,
+        //     duration: 1,
+        //   }, 'a')
+  
+        gsap.from(".slider", {
+          scrollTrigger: {
+            trigger: '.slider',
+          },
+          y: 100,
+          opacity: 0,
+          duration: 0.5,
+          stagger:1
+        })
+  
+      }, parentRef)
+  
+      return () => ctx1.revert();
+  
+    }, [])
+
     const slidesArr = [
         {
             pic: profile1,
@@ -49,6 +87,7 @@ const SocialSwiper = () => {
             description: " I really appreciate working with Printify on my brand. Afro Unicorn was only supposed to be my design on a white shirt. It is so much more. Printify allows me the time to run the business and not work in the business. "
         },
     ]
+
     return (
         <Swiper
             slidesPerView={"auto"}
@@ -57,10 +96,11 @@ const SocialSwiper = () => {
                 clickable: true,
             }}
             modules={[Pagination]}
-            className="w-full sm:w-[80%]"
+            className="w-full h-[50vh]"
+            ref={parentRef}
         >
             {slidesArr.map((e) => (
-                <SwiperSlide key={e.name} className='w-[380px] max-h-[376px] flex flex-col gap-5 p-[10px] sm:p-[55px] bg-white rounded-md'>
+                <SwiperSlide key={e.name} className='slider w-[380px] h-[376px] flex flex-col gap-5 p-[10px] sm:p-[55px] bg-white rounded-md'>
                     <div className='flex flex-col sm:flex-row gap-4'>
                         <img loading='lazy' className='w-[44px] sm:w-[64px] h-[44px] sm:h-[64px] rounded-md' src={e.pic} alt="" srcSet="" />
                         <div className='flex flex-col'>

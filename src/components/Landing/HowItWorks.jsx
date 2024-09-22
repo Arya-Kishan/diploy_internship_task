@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import rightArrowIcon from '../../assets/icons/rightArrowIcon.svg'
 import triangle1 from '../../assets/triangle1.svg'
 import triangle2 from '../../assets/triangle2.svg'
@@ -6,8 +6,73 @@ import create from '../../assets/icons/create.png'
 import handle from '../../assets/icons/handle.png'
 import sell from '../../assets/icons/sell.png'
 import shirt from '../../assets/shirt.webp'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const HowItWorks = () => {
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    const parentRef = useRef();
+
+
+    useLayoutEffect(() => {
+
+        const ctx1 = gsap.context(() => {
+
+            let t1 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".box",
+                    start:"top center"
+                },
+            })
+                .from(".box", {
+                    opacity: 0,
+                    x: -400,
+                    duration: 0.5,
+                }, 'a')
+                .from(".right", {
+                    opacity: 0,
+                    y: 400,
+                    duration: 0.5,
+                }, 'b')
+
+            gsap.from(".card0", {
+                scrollTrigger: {
+                    trigger: '.card0',
+                    start:'top center'
+                },
+                y: -100,
+                opacity: 0,
+                delay: 0,
+                duration: 0.4
+            })
+            gsap.from(".card1", {
+                scrollTrigger: {
+                    trigger: '.card1',
+                    start:'top center'
+                },
+                y: -100,
+                opacity: 0,
+                delay: 0.4,
+                duration: 0.4
+            })
+            gsap.from(".card2", {
+                scrollTrigger: {
+                    trigger: '.card2',
+                    start:'top center'
+                },
+                y: -100,
+                opacity: 0,
+                delay: 0.8,
+                duration: 0.4
+            })
+
+        }, parentRef)
+
+        return () => ctx1.revert();
+
+    }, [])
 
     const arr = [
         {
@@ -31,22 +96,22 @@ const HowItWorks = () => {
     ]
 
     return (
-        <div className='howItWorks w-full h-fit flex flex-col justify-center bg-bgColor1 px-[24px] py-[100px] relative'>
+        <div className='howItWorks w-full h-fit flex flex-col justify-center items-center bg-bgColor1 px-[24px] py-[100px] overflow-hidden relative' ref={parentRef}>
 
             {/* fist box */}
-            <div className='w-full sm:w-[90%] min-h-[350px] flex flex-col sm:flex-row bg-white rounded-md mt-[180px] p-2'>
+            <div className='w-full lg:w-[80%] min-h-[420px] h-fit flex flex-col sm:flex-row bg-white sm:bg-transparent rounded-md mt-[50px] sm:mt-[180px] p-2 sm:p-0 main_box relative'>
 
                 {/* left */}
-                <div className='w-full sm:w-[50%] flex justify-center items-center gap-2'>
-                    <img loading='lazy' className='w-[50%]' src={shirt} alt="" srcSet="" />
+                <div className='w-full lg:w-[50%] flex justify-center items-center gap-2 relative z-20'>
+                    <img loading='lazy' className='w-[55%] lg:absolute bottom-0 left-0' src={shirt} alt="" srcSet="" />
                 </div>
 
                 {/* right */}
-                <div className='w-full sm:w-[50%] flex justify-center items-center gap-2'>
+                <div className='w-full sm:w-[50%] flex justify-center items-center gap-2 right z-20'>
 
                     {/* right inner */}
                     <div className='max-w-[400px] flex flex-col gap-8'>
-                        <p className='text-[24px] sm:text-[32px] text-txtColor0 font-bold'>Easily add your design to a wide range of products</p>
+                        <p className='text-[20px] sm:text-[32px] text-txtColor0 font-bold'>Easily add your design to a wide range of products</p>
 
                         <p className='text-txtColor2 text-[12px] sm:text-[16px]'>With our free design tools, you can easily add your custom designs to t-shirts, mugs, phone cases, and hundreds of other products</p>
 
@@ -58,12 +123,14 @@ const HowItWorks = () => {
 
                 </div>
 
+                <div className='w-full lg:w-[80%] min-h-[420px] h-fit flex flex-col sm:flex-row bg-white shadow-lg rounded-md mt-[50px] sm:mt-[180px] p-2 sm:p-0 absolute bottom-0 right-0 z-10 box'></div>
+
             </div>
 
-            {/* second div */}
+            {/* HOWITWORKS THREE CARDS */}
             <div className='w-full min-h-[520px] h-fit flex flex-col sm:flex-row justify-center items-center gap-10 font-Roboto px-[32px] pt-[120px]'>
                 {arr.map((e, index) => (
-                    <div key={index} className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
+                    <div key={index} className={`card${index} max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start`}>
                         <p className={`w-[120px] h-[120px] rounded-full overflow-hidden flex justify-center items-center`} style={{ backgroundColor: e.color }}>
                             <img loading='lazy' className='w-[80px]' src={e.pic} alt="" srcSet="" />
                         </p>

@@ -19,11 +19,6 @@ const NavbarLinks = ({ link }) => {
         setOptions(false);
     }
 
-    const howItWoksOptions = ["how prinitfy works", "print on demand", "printify quality promise", "what to sell"]
-    const servicesOptions = ["printify studio", "printify express delivery", "transfer products", "order in bulk", "experts program"]
-    const useCasesOptions = ["merch for fans", "merch for ecommerce", "merch for enterprises", "grow your store"]
-    const needHelpOptions = ["help center", "contacts", "my request"]
-
     const linksOptions = [
         {
             title: "how it works",
@@ -56,7 +51,7 @@ const NavbarLinks = ({ link }) => {
     return (
         <div className='h-[70px] capitalize flex items-center gap-2 text-[15px] font-normal text-txtColor2 cursor-pointer relative' onMouseEnter={handleHover} onMouseLeave={handleLeave}>
 
-            <span>{link}</span>
+            <span className='hover:text-txtColor1'>{link}</span>
 
             {linksArrow.includes(link) && <img className={`w-[15px] transition duration-500 ease-in-out ${!options ? " rotate-180" : "rotate-0"}`} src={!options ? arrowBlackIcon : arrowGreenIcon} alt="" srcSet="" />}
 
