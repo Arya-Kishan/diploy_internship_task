@@ -1,7 +1,6 @@
 import React from 'react'
 import Front from '../components/Landing/Front'
 import Navbar from '../components/Landing/Navbar'
-import Features from '../components/Landing/Features'
 import HowItWorks from '../components/Landing/HowItWorks'
 import Connect from '../components/Landing/Connect'
 import Footer from '../components/Landing/Footer'
