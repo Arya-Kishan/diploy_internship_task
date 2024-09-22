@@ -8,13 +8,13 @@ import ImgButton from '../Buttons/ImgButton'
 
 const Front = () => {
   return (
-    <div className='w-full min-h-[500px] h-fit flex flex-col sm:flex-row mt-[100px] sm:mt-[200px]'>
+    <div className='w-full min-h-[600px] h-[calc(100vh-70px)] flex flex-col justify-between sm:flex-row pt-[70px]'>
 
       {/* left */}
       <div className='w-full sm:w-[50%] h-full flex justify-center items-center'>
 
         {/* inner left div */}
-        <div className='max-w-[500px] h-fit flex flex-col gap-5 pl-8'>
+        <div className='max-w-[500px] w-[90%] h-fit flex flex-col gap-5 pl-8'>
 
           <p className='text-[30px] sm:text-[56px] font-bold text-txtColor0'>Create and sell custom products</p>
 
@@ -43,7 +43,6 @@ const Front = () => {
         </div>
 
       </div>
-
 
       {/* right */}
       <div className='w-full sm:w-[50%] h-[full] flex justify-start items-center '>
