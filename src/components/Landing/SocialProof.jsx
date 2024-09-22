@@ -1,7 +1,6 @@
 import React from 'react'
 import SocialSwiper from '../Swiper/SocialSwiper'
 import triangle2 from '../../assets/triangle2.svg'
-import { motion } from 'framer-motion'
 
 const SocialProof = () => {
 
