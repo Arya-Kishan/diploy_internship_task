@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react'
 import watering from '../../assets/watering.jpg'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import HoverButton from '../Buttons/HoverButton'
 
 const Financials = () => {
 
@@ -74,11 +75,8 @@ const Financials = () => {
                             </div>
 
                         </div>
-
-                        <p className='font-bold bg-btnColor1 hover:bg-btnColor2 cursor-pointer w-full sm:w-[118px] h-[40px] rounded-md flex justify-center items-center text-[13px] sm:text-[16px]'>Start Selling</p>
-
+                        <HoverButton className=' w-full sm:w-[118px] h-[40px] text-[13px] sm:text-[16px]' text={"Start Selling"} />
                         <p className='font-medium text-txtColor3 text-[13px] sm:text-[16px]'>100% Free to use · 900+ Products · Largest print network</p>
-
                     </div>
                 </div>
 

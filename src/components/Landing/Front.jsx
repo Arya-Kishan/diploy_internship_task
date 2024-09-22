@@ -2,6 +2,9 @@ import React from 'react'
 import playIcon from '../../assets/icons/playIcon.svg'
 import correctIcon from '../../assets/icons/correctIcon.svg'
 import LottieImage1 from '../LottieImage1'
+import Button from '../Buttons/Button'
+import HoverButton from '../Buttons/HoverButton'
+import ImgButton from '../Buttons/ImgButton'
 
 const Front = () => {
   return (
@@ -31,14 +34,8 @@ const Front = () => {
           </div>
 
           <div className='flex gap-1 sm:gap-4 mt-5 text-[10px] sm:text-[12px]'>
-
-            <button className='w-[100px] sm:w-[160px] h-[30px] sm:h-[48px] flex gap-2 rounded-sm bg-btnColor1 hover:bg-[#6aec42] justify-center items-center text-white font-semibold sm:text-[16px]'>Start for free</button>
-
-            <button className='w-[100px] sm:w-[160px] h-[30px] sm:h-[48px] flex gap-2 rounded-sm border-2 border-gray-400 justify-center items-center text-txtColor2 font-semibold sm:text-[16px]'>
-              <img loading='lazy' className='w-[15px] sm:w-[25px]' src={playIcon} alt="" />
-              <p className='hover:text-txtColor1'>How it works</p>
-            </button>
-
+            <HoverButton className='w-[100px] sm:w-[160px] h-[30px] sm:h-[48px] gap-2 sm:text-[16px]' text={"Start for free"} />
+            <ImgButton src={playIcon} text={"How it works"} />
           </div>
 
           <p className='text-txtColor1 text-[12px] sm:text-[16px] font-semibold'>Trusted by over 8M sellers around the world</p>

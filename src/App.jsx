@@ -25,7 +25,7 @@ const App = () => {
         <Financials />
         <Footer />
       </Suspense>
-      <img className='w-[40px] h-[40px] fixed bottom-8 left-4 bg-white shadow-md rounded-full p-2' src={thumbIcon} alt="" srcset="" />
+      <img className='hidden tablet:flex w-[40px] h-[40px] fixed bottom-8 left-4 bg-white shadow-md rounded-full p-2 z-50' src={thumbIcon} alt="" srcSet="" />
     </div>
   )
 }

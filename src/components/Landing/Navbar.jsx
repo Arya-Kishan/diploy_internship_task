@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import thumbIcon from '../../assets/icons/thumbIcon.svg'
 import menuIcon from '../../assets/icons/menuIcon.svg'
 import NavbarLinks from '../NavbarLinks';
+import Button from '../Buttons/Button';
+import HoverButton from '../Buttons/HoverButton';
 
 const Navbar = () => {
 
@@ -43,8 +45,8 @@ const Navbar = () => {
             </div>
 
             <div className='flex items-center gap-4 text-[12px] sm:text-[16px]'>
-                <button className='w-[60px] sm:w-[88px] h-[26px] sm:h-[36px] rounded-sm font-medium capitalize border-2 border-brdrColor1 hover:text-txtColor1'>login</button>
-                <button className='w-[60px] sm:w-[88px] h-[26px] sm:h-[36px] rounded-sm font-medium capitalize bg-txtColor1 text-white hover:bg-btnColor2 '>sign up</button>
+                <Button className={"w-[60px] sm:w-[88px] h-[26px] sm:h-[36px] border-2"} text={"login"} />
+                <HoverButton className={"w-[60px] sm:w-[88px] h-[26px] sm:h-[36px] rounded-sm "} text={"sign up"} />
             </div>
 
         </div>

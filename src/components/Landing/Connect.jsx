@@ -11,6 +11,7 @@ import shopify from '../../assets/icons/shopify.svg'
 import bg2 from '../../assets/bg2.svg'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Button from '../Buttons/Button'
 
 const Connect = () => {
 
@@ -23,11 +24,29 @@ const Connect = () => {
   useLayoutEffect(() => {
 
     const ctx1 = gsap.context(() => {
+
+      let t3 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".head",
+        },
+      })
+        .from(".head", {
+          y: "-100",
+          duration: 2,
+          ease:"elastic.inOut"
+        }, 'a')
+
+
       let t1 = gsap.timeline({
         scrollTrigger: {
           trigger: ".head",
         },
       })
+        .to(".img0", {
+          top: "50%",
+          left: "85%",
+          duration: 1.5,
+        }, 'a')
         .to(".img1", {
           top: "15%",
           left: "75%",
@@ -91,7 +110,7 @@ const Connect = () => {
 
       <div className='w-full flex flex-col justify-center items-center gap-4'>
 
-        <p className='font-semibold text-txtColor0 text-[25px] sm:text-[40px]'>Connect your store</p>
+        <div className='font-semibold text-txtColor0 text-[25px] sm:text-[40px] overflow-hidden'><p className='head'>Connect your store</p></div>
 
         <p className='text-txtColor2 text-[16px] text-center sm:text-start'>Printify easily intergrates with major e-commerce platforms and marketplaces</p>
 
@@ -110,7 +129,7 @@ const Connect = () => {
 
         <p className='text-txtColor4 text-[16px] text-center sm:text-start sm:text-[25px] font-bold z-20'>Are you a large business looking for custom solutions?</p>
 
-        <p className='w-[140px] h-[40px] rounded-lg shadow-md bg-white flex justify-center items-center text-center text-[12px] sm:text-[16px] font-medium hover:text-txtColor1 cursor-pointer z-20'>Talk to sales</p>
+        <Button className='w-[140px] h-[40px] shadow-md text-[12px] sm:text-[16px] bg-white z-20' text={"Talk to sales"}/>
 
         {/* bg's */}
         <img className='absolute -top-[70%] right-0 rotate-[30deg] z-10' src={bg2} alt="" srcSet="" />

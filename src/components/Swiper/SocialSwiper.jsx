@@ -90,7 +90,7 @@ const SocialSwiper = () => {
             ref={parentRef}
         >
             {slidesArr.map((e) => (
-                <SwiperSlide key={e.name} className='slider w-[380px] h-[376px] flex flex-col gap-5 p-[10px] sm:p-[55px] bg-white rounded-md'>
+                <SwiperSlide key={e.name} className='slider w-[380px] h-fit lg:min-h-[376px] flex flex-col gap-5 p-[10px] sm:p-[55px] bg-white rounded-md'>
                     <div>
                         <img loading='lazy' className='w-[44px] sm:w-[64px] h-[44px] sm:h-[64px] rounded-md' src={e.pic} alt="" srcSet="" />
                         <div className='flex flex-col'>
