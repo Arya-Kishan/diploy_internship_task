@@ -20,7 +20,7 @@ const SocialProof = () => {
       {/* socail proofs swiper */}
       <SocialSwiper />
 
-      <img className='absolute -bottom-10 left-[50%] -translate-x-[50%]' src={triangle2} alt="" srcset="" />
+      <img loding="lazy" className='absolute -bottom-10 left-[50%] -translate-x-[50%]' src={triangle2} alt="" srcset="" />
 
     </div>
   )

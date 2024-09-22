@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
                 <div className='flex flex-wrap gap-4'>
                     {socialArr.map((e) => (
-                        <img className='w-[32px]' src={e} alt="" srcset="" />
+                        <img loading='lazy' className='w-[32px]' src={e} alt="" srcset="" />
                     ))}
                 </div>
             </div>

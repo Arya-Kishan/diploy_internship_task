@@ -38,7 +38,7 @@ const HowItWorks = () => {
 
                 {/* left */}
                 <div className='w-full sm:w-[50%] flex justify-center items-center gap-2'>
-                    <img className='w-[50%]' src={shirt} alt="" srcset="" />
+                    <img loading='lazy' className='w-[50%]' src={shirt} alt="" srcset="" />
                 </div>
 
                 {/* right */}
@@ -52,7 +52,7 @@ const HowItWorks = () => {
 
                         <button className='text-txtColor1 flex gap-4 font-bold'>
                             <p>All Products</p>
-                            <img src={rightArrowIcon} alt="" srcset="" />
+                            <img loading='lazy' src={rightArrowIcon} alt="" srcset="" />
                         </button>
                     </div>
 
@@ -65,7 +65,7 @@ const HowItWorks = () => {
                 {arr.map((e, index) => (
                     <div className='max-w-[320px] flex flex-col gap-6 justify-center items-center sm:items-start'>
                         <p className={`w-[120px] h-[120px] rounded-full overflow-hidden flex justify-center items-center`} style={{ backgroundColor: e.color }}>
-                            <img className='w-[80px]' src={e.pic} alt="" srcset="" />
+                            <img loading='lazy' className='w-[80px]' src={e.pic} alt="" srcset="" />
                         </p>
                         <div className='flex flex-col'>
                             <p className='text-[24px] font-bold text-txtColor1 uppercase'>{e.title1}</p>
@@ -77,8 +77,8 @@ const HowItWorks = () => {
 
             </div>
 
-            <img className='w-[350px] absolute top-0 left-[50%] -translate-x-[50%]' src={triangle1} alt="" srcset="" />
-            <img className='w-[350px] absolute top-full left-[50%] -translate-x-[50%]' src={triangle2} alt="" srcset="" />
+            <img loading='lazy' className='w-[350px] absolute top-0 left-[50%] -translate-x-[50%]' src={triangle1} alt="" srcset="" />
+            <img loading='lazy' className='w-[350px] absolute top-full left-[50%] -translate-x-[50%]' src={triangle2} alt="" srcset="" />
 
         </div>
     )

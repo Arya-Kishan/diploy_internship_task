@@ -61,15 +61,14 @@ const Connect = () => {
 
         <div className='w-full sm:w-[80%] h-[100vh] flex justify-center items-center relative'>
 
-          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[15%] left-[75%]' src={wix} alt="" srcset="" />
-          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[20%] left-[35%]' src={bigecommerce} alt="" srcset="" />
-          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[10%] left-[15%]' src={squarespace} alt="" srcset="" />
-          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[10%] left-[60%]' src={woo} alt="" srcset="" />
-          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[25%] left-[70%]' src={etsy} alt="" srcset="" />
-          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[30%] left-[15%]' src={api} alt="" srcset="" />
-          <img className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[15%] left-[25%]' src={prestashop} alt="" srcset="" />
-          <img
-            className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[50%] left-[50%] -translate-x-[50%]' src={thumbIcon} alt="" srcset="" />
+          <img loading='lazy' className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[15%] left-[75%]' src={wix} alt="" srcset="" />
+          <img loading='lazy' className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[20%] left-[35%]' src={bigecommerce} alt="" srcset="" />
+          <img loading='lazy' className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[10%] left-[15%]' src={squarespace} alt="" srcset="" />
+          <img loading='lazy' className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[10%] left-[60%]' src={woo} alt="" srcset="" />
+          <img loading='lazy' className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[25%] left-[70%]' src={etsy} alt="" srcset="" />
+          <img loading='lazy' className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[30%] left-[15%]' src={api} alt="" srcset="" />
+          <img loading='lazy' className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute bottom-[15%] left-[25%]' src={prestashop} alt="" srcset="" />
+          <img loading='lazy' className='w-[55px] sm:w-[80px] p-2 sm:p-5 bg-white shadow-lg rounded-lg absolute top-[50%] left-[50%] -translate-x-[50%]' src={thumbIcon} alt="" srcset="" />
 
         </div>
 

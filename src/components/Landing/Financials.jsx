@@ -50,7 +50,7 @@ const Financials = () => {
 
                 {/* right */}
                 <div className='hidden w-[50%] lg:flex justify-center items-end'>
-                    <img src={watering} alt="" srcset="" />
+                    <img loading='lazy' src={watering} alt="" srcset="" />
                 </div>
 
             </div>
