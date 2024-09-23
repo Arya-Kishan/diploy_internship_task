@@ -33,35 +33,39 @@ const Footer = () => {
     const siteInfoArr = ["Intellectual Property Policy", "Terms of Service", "Privacy Policy", "Security"]
 
     return (
-        <div className='w-full flex flex-col px-[32px]'>
+        <div className='w-full flex flex-col'>
 
-            <div className='w-full min-h-[50px] flex flex-col sm:flex-row justify-between gap-1'>
-                <div className='flex gap-1 text-txtColor1'>
-                    <img loading='lazy' src={thumbIcon} alt="" srcSet="" />
-                    <p className='block font-bold text-[32px]'>Printify</p>
+            <div className='w-full flex flex-col px-[32px]'>
+
+                <div className='w-full min-h-[50px] flex flex-col sm:flex-row justify-between gap-1'>
+                    <div className='flex gap-1 text-txtColor1'>
+                        <img loading='lazy' src={thumbIcon} alt="" srcSet="" />
+                        <p className='block font-bold text-[32px]'>Printify</p>
+                    </div>
+                    <div className='flex flex-wrap gap-4'>
+                        {socialArr.map((e) => (
+                            <img key={e} loading='lazy' className='w-[32px] cursor-pointer' src={e} alt="" srcSet="" />
+                        ))}
+                    </div>
                 </div>
-                <div className='flex flex-wrap gap-4'>
-                    {socialArr.map((e) => (
-                        <img key={e} loading='lazy' className='w-[32px] cursor-pointer' src={e} alt="" srcSet="" />
+
+                <div className='w-full flex flex-wrap justify-between mt-[40px] sm:mt-[96px] mb-[72px]'>
+                    {footerArr.map((e) => (
+                        <div key={e.title} className='max-w-[50%] flex flex-col gap-8 basis-[50%] tablet:basis-[17%] pt-[20px]'>
+                            <p className='text-txtColor0 font-semibold capitalize'>{e.title}</p>
+                            <div className='flex flex-col gap-2 text-txtColor2 text-[12px] sm:text-[14px]'>
+                                {e.dataArr.map((e) => (
+                                    <p key={e} className='hover:text-txtColor1 cursor-pointer'>{e}</p>
+                                ))}
+                            </div>
+                        </div>
                     ))}
                 </div>
-            </div>
 
-            <div className='w-full flex flex-wrap justify-between mt-[40px] sm:mt-[96px] mb-[72px]'>
-                {footerArr.map((e) => (
-                    <div key={e.title} className='max-w-[50%] flex flex-col gap-8 basis-[50%] tablet:basis-[17%] pt-[20px]'>
-                        <p className='text-txtColor0 font-semibold capitalize'>{e.title}</p>
-                        <div className='flex flex-col gap-2 text-txtColor2 text-[12px] sm:text-[14px]'>
-                            {e.dataArr.map((e) => (
-                                <p key={e} className='hover:text-txtColor1 cursor-pointer'>{e}</p>
-                            ))}
-                        </div>
-                    </div>
-                ))}
             </div>
 
             <div className='w-full flex flex-col justify-center items-center gap-5 bg-bgColor1 pt-[36px] pb-[24px]'>
-                <div className='flex gap-6 flex-wrap'>
+                <div className='flex gap-6 flex-wrap items-center justify-center p-2'>
                     {siteInfoArr.map((e) => (
                         <p key={e} className='text-[#949494] text-[14px] font-medium'>{e}</p>
                     ))}

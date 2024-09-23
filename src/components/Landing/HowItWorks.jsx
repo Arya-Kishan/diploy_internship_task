@@ -149,7 +149,7 @@ const HowItWorks = () => {
 
             <div className='w-[90%] block sm:hidden mt-20'><HowItWorksSwiper slidesArr={arr} /></div>
 
-            <img loading='lazy' className='w-[350px] absolute top-0 left-[50%] -translate-x-[50%]' src={triangle1} alt="" srcSet="" />
+            <img loading='lazy' className='w-[350px] absolute -top-[5px] left-[50%] -translate-x-[50%]' src={triangle1} alt="" srcSet="" />
             <img loading='lazy' className='w-[350px] absolute top-full left-[50%] -translate-x-[50%]' src={triangle2} alt="" srcSet="" />
 
         </div>
