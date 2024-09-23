@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import '../../App.css'
+import './Swiper.css'
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -18,26 +18,26 @@ const SocialSwiper = () => {
 
     gsap.registerPlugin(ScrollTrigger)
     const parentRef = useRef();
-  
+
     useLayoutEffect(() => {
-  
-      const ctx1 = gsap.context(() => {
-  
-        gsap.from(".slider", {
-          scrollTrigger: {
-            trigger: '.slider',
-            start:"top center"
-          },
-          y: 100,
-          opacity: 0,
-          duration: 0.5,
-          stagger:0.5
-        })
-  
-      }, parentRef)
-  
-      return () => ctx1.revert();
-  
+
+        const ctx1 = gsap.context(() => {
+
+            gsap.from(".slider", {
+                scrollTrigger: {
+                    trigger: '.slider',
+                    start: "top center"
+                },
+                y: 100,
+                opacity: 0,
+                duration: 0.5,
+                stagger: 0.5
+            })
+
+        }, parentRef)
+
+        return () => ctx1.revert();
+
     }, [])
 
     const slidesArr = [
@@ -86,21 +86,21 @@ const SocialSwiper = () => {
                 clickable: true,
             }}
             modules={[Pagination]}
-            className="w-full h-[50vh]"
+            className='w-full sm:w-[80%] h-full'
             ref={parentRef}
         >
             {slidesArr.map((e) => (
-                <SwiperSlide key={e.name} className='slider w-[380px] h-fit lg:min-h-[376px] flex flex-col gap-5 p-[10px] sm:p-[55px] bg-white rounded-md'>
-                    <div>
+                <SwiperSlide key={e.name} className='slider p-[10px] sm:p-[50px]  flex flex-col gap-5 bg-white rounded-xl' id='socialSlider'>
+                    <div className='flex gap-4 items-start'>
                         <img loading='lazy' className='w-[44px] sm:w-[64px] h-[44px] sm:h-[64px] rounded-md' src={e.pic} alt="" srcSet="" />
                         <div className='flex flex-col'>
-                            <p className='text-[14px] sm:text-[24px] text-txtColor0'>{e.name}</p>
-                            <p className='text-[12px] sm:text-[16px] text-txtColor1'>{e.authorLink}</p>
-                            <p className='flex'>{"stars".split("").map((e,i) => (<img key={i} loading='lazy' className='w-[18px]' src={starIcon} alt="" srcSet="" />))}</p>
+                            <p className='text-[20px] sm:text-[24px] text-txtColor0'>{e.name}</p>
+                            <p className='text-[16px] text-txtColor1'>{e.authorLink}</p>
+                            <p className='flex p-1'>{"stars".split("").map((e, i) => (<img key={i} loading='lazy' className='w-[18px]' src={starIcon} alt="" srcSet="" />))}</p>
                         </div>
                     </div>
 
-                    <p className='text-[10px]'>{e.description}</p>
+                    <p className='text-[16px] text-txtColor2'>{e.description}</p>
                 </SwiperSlide>
             ))}
         </Swiper>

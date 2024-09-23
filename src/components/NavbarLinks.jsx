@@ -52,7 +52,7 @@ const NavbarLinks = ({ link }) => {
             {/* desktop */}
             <div className='hidden tablet:flex h-[40px] lg:h-[70px] capitalize items-center gap-2 text-[15px] font-normal text-txtColor2 cursor-pointer relative' onMouseEnter={handleHover} onMouseLeave={handleLeave}>
 
-                <span className='hover:text-txtColor1'>{link}</span>
+                <span className='hover:text-txtColor1 text-[16px]'>{link}</span>
 
                 {linksArrow.includes(link) && <img className={`w-[15px] transition duration-500 ease-in-out ${!options ? " rotate-180" : "rotate-0"}`} src={!options ? arrowBlackIcon : arrowGreenIcon} alt="" srcSet="" />}
 

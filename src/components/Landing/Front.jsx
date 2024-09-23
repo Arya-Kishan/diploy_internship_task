@@ -7,11 +7,14 @@ import HoverButton from '../Buttons/HoverButton'
 import ImgButton from '../Buttons/ImgButton'
 
 const Front = () => {
+
+  const listArr = ["100% Free to use", "900+ High Quality Products", "Largest global print network"];
+
   return (
     <div className='w-full min-h-[600px] h-[calc(100vh-70px)] flex flex-col justify-between sm:flex-row pt-[70px]'>
 
       {/* left */}
-      <div className='w-full sm:w-[50%] h-full flex justify-center items-center'>
+      <div className='w-full sm:w-[50%] h-full flex justify-center items-center sm:items-end'>
 
         {/* inner left div */}
         <div className='max-w-[500px] w-[90%] h-fit flex flex-col gap-5 pl-8'>
@@ -19,18 +22,12 @@ const Front = () => {
           <p className='text-[30px] sm:text-[56px] font-bold text-txtColor0'>Create and sell custom products</p>
 
           <div className='flex flex-col gap-2 text-[12px] sm:text-[16px] font-medium text-txtColor2 pl-2'>
-            <div className='flex gap-2'>
-              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcSet="" />
-              <p>100% Free to use</p>
-            </div>
-            <div className='flex gap-2'>
-              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcSet="" />
-              <p>900+ High Quality Products</p>
-            </div>
-            <div className='flex gap-2'>
-              <img loading='lazy' className='w-[15px] sm:w-[20px]' src={correctIcon} alt="" srcSet="" />
-              <p>Largest global print network</p>
-            </div>
+            {listArr.map((e) => (
+              <div key={e} className='flex gap-2'>
+                <img loading='lazy' className='w-[16px] sm:w-[20px]' src={correctIcon} alt="" srcSet="" />
+                <p>{e}</p>
+              </div>
+            ))}
           </div>
 
           <div className='flex gap-1 sm:gap-4 mt-5 text-[10px] sm:text-[12px]'>
@@ -45,10 +42,9 @@ const Front = () => {
       </div>
 
       {/* right */}
-      <div className='w-full sm:w-[50%] h-[full] flex justify-start items-center '>
+      <div className='w-full sm:w-[50%] h-[full] flex justify-start items-end '>
         <div className='w-full'><LottieImage1 /></div>
       </div>
-
 
     </div>
   )

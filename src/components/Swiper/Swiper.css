@@ -1,0 +1,34 @@
+/* .swiper-slide {
+    width: 35% !important;
+    height: 40vh !important;
+}
+
+@media only screen and (max-width: 900px) {
+    .swiper-slide {
+        width: 100% !important;
+    }
+} */
+
+#socialSlider {
+    width: 420px;
+    min-height: 340px;
+    height: fit-content;
+}
+
+@media only screen and (max-width: 900px) {
+    #socialSlider {
+        width: 100%;
+        min-height: 250px;
+    }
+
+}
+
+.swiper{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+}
+
+.swiper-pagination {
+    position: static !important;
+}

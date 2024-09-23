@@ -11,7 +11,7 @@ const Navbar = () => {
     const [sideBar, setSideBar] = useState(false);
 
     return (
-        <div className='w-full h-[70px] flex justify-between tablet:justify-around items-center shadow-md px-[20px] sm:px-[32px] font-Roboto fixed top-0 left-0 bg-white z-50'>
+        <div className='w-full h-[70px] flex justify-between tablet:justify-around items-center gap-1 shadow-md px-[20px] sm:px-[32px] font-Roboto fixed top-0 left-0 bg-white z-50'>
 
 
             {/* logo */}

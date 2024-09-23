@@ -46,6 +46,7 @@ const Connect = () => {
           top: "50%",
           left: "85%",
           duration: 1.5,
+          scale:1.5
         }, 'a')
         .to(".img1", {
           top: "15%",
@@ -53,9 +54,10 @@ const Connect = () => {
           duration: 1.5,
         }, 'a')
         .to(".img2", {
-          top: "20%",
+          top: "25%",
           left: "35%",
           duration: 1.5,
+          scale:1.5
         }, 'a')
         .to(".img3", {
           top: "10%",
@@ -81,6 +83,7 @@ const Connect = () => {
           bottom: "15%",
           left: "25%",
           duration: 1.5,
+          scale:1.2
         }, 'a')
 
       let t2 = gsap.timeline({
@@ -106,7 +109,7 @@ const Connect = () => {
   }, [])
 
   return (
-    <div className='w-full min-h-dvh flex flex-col justify-center items-center mt-[150px]' ref={parentRef}>
+    <div className='w-full min-h-dvh flex flex-col justify-center items-center mt-[50px] overflow-hidden' ref={parentRef}>
 
       <div className='w-full flex flex-col justify-center items-center gap-4'>
 

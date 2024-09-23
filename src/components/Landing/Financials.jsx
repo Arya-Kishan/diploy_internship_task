@@ -76,7 +76,7 @@ const Financials = () => {
 
                         </div>
                         <HoverButton className=' w-[90%] sm:w-[118px] h-[40px] text-[13px] sm:text-[16px]' text={"Start Selling"} />
-                        <p className='font-medium text-txtColor3 text-[13px] sm:text-[16px]'>100% Free to use · 900+ Products · Largest print network</p>
+                        <p className='font-medium text-txtColor3 text-[13px] sm:text-[16px] mt-5'>100% Free to use · 900+ Products · Largest print network</p>
                     </div>
                 </div>
 
